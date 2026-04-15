@@ -1,0 +1,9 @@
+{
+  "name": "ai-processor",
+  "version": "1.0.0",
+  "description": "AI新闻解读云函数",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^3.0.0"
+  }
+}

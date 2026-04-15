@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary-bg text-text-primary font-sans;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-primary-card border border-border rounded-lg p-4 transition-all duration-300;
+  }
+  
+  .card:hover {
+    @apply border-primary-accent/30;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-accent text-primary-bg px-4 py-2 rounded font-medium hover:bg-primary-accent/90 transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border border-primary-accent text-primary-accent px-4 py-2 rounded font-medium hover:bg-primary-accent/10 transition-colors;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-accent to-emerald-400 bg-clip-text text-transparent;
+  }
+  
+  .section-title {
+    @apply text-2xl font-display font-semibold text-text-primary mb-6;
+  }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A2E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D2D3A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3D3D4A;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
